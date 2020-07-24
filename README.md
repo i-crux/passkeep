@@ -24,7 +24,7 @@
 否则出密码管理界面,右边为删除密码按钮, 右下角为添加新密码的按钮
 <div align=center><img src ="./readme-imgs/04.png"/></div>
 
-展开后,可以查及复制密码
+展开后,可以查看,复制密码及复制用户名
 <div align=center><img src ="./readme-imgs/05.png"/></div>
 
 密码可以通过 '+' 号迭代,(迭代次数也是您在其他设备上恢复密码的关键信息)
