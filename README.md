@@ -29,3 +29,8 @@
 
 密码可以通过 '+' 号迭代,(迭代次数也是您在其他设备上恢复密码的关键信息)
 <div align=center><img src ="./readme-imgs/06.png"/></div>
+
+### 搜索
+可以输入被管理的网站或app的信息或用户名来搜索密码
+
+<div align=center><img src ="./readme-imgs/07.png"/></div>
