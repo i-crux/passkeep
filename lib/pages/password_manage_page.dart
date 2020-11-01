@@ -325,10 +325,29 @@ class _PasswordManagePageState extends State<PasswordManagePage> {
       uint8listCanPrint = Uint8List(uint8list.length);
       for(int i = 0; i < uint8list.length; i++) {
         int val = uint8list[i] & 0x7f;
+        if( val < 0x21 ) {
+          val += 0x21;
+        }
         if(val >= 0x7f){
           val = 0x7e;
-        } else if( val < 0x20 ) {
-          val += 0x20;
+        }
+        if( val == 0x22 ) {
+          val = 0x61;
+        }
+        if( val == 0x27 ) {
+          val = 0x62;
+        }
+        if( 0x2b <= val && val <= 0x2f) {
+          val += 5;
+        }
+        if( 0x3a <= val && val <= 0x3f) {
+          val += 6;
+        }
+        if( 0x5b <= val && val <= 0x60) {
+          val -= 8;
+        }
+        if( 0x7b <= val && val <= 0x7f) {
+          val -= 10;
         }
         uint8listCanPrint[i] = val;
       }
