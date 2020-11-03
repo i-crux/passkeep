@@ -324,6 +324,9 @@ class _PasswordManagePageState extends State<PasswordManagePage> {
       uint8list = md5.convert(utf8.encode(passwordBase)).bytes;
       uint8listCanPrint = Uint8List(uint8list.length);
       for(int i = 0; i < uint8list.length; i++) {
+        /*
+         * 密码字符串过滤 去除非法字符和不可打印字符
+         */
         int val = uint8list[i] & 0x7f;
         if( val < 0x21 ) {
           val += 0x21;
